@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/movies_nav" android:icon="@drawable/ic_theaters_black_24dp" android:title="Movies" android:checked="true" />
+        <item android:id="@+id/tv_nav" android:icon="@drawable/ic_video_label_black_24dp" android:title="TV Shows" />
+        <item android:id="@+id/celeb_nav" android:icon="@drawable/ic_supervisor_account_black_24dp" android:title="Celebs" />
+        <item android:id="@+id/favorites_nav" android:icon="@drawable/ic_favorite_black_24dp" android:title="My Favourites" />
+    </group>
+    <item android:title="Other">
+        <menu>
+            <item android:title="G+ Community" android:id="@+id/google_plus_nav" />
+            <item android:title="Rate this app" android:id="@+id/rate_us_nav" />
+            <item android:title="Logout" android:id="@+id/logout"/>
+            <item android:title="Contact Us" android:id="@+id/contact_us_nav" />
+        </menu>
+    </item>
+
+</menu>

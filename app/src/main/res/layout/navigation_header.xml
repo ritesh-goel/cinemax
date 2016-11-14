@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@drawable/navheader3"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_profile_image"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_account_circle_black_36dp" />
+
+    <TextView
+        android:id="@+id/nav_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textSize="24sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/nav_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/round_button"
+        android:padding="16dp"
+        android:text="Login >"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nav_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1dp"
+        android:scrollbarSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "140423471783",
+    "firebase_url": "https://movie-central-84827.firebaseio.com",
+    "project_id": "movie-central-84827",
+    "storage_bucket": "movie-central-84827.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140423471783:android:72776be4dfc11aa9",
+        "android_client_info": {
+          "package_name": "com.rg.moviescentral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140423471783-f173nuqucvspfr8i7nc3d9v7ig6at5d2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rg.moviescentral",
+            "certificate_hash": "58E5A505F0D24E45AEB03736BCF44FF5B6E082E6"
+          }
+        },
+        {
+          "client_id": "140423471783-cgg8dfgpg2rp2j6tqgvq829pljfvot1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rg.moviescentral",
+            "certificate_hash": "E1F0A1FF26539A4A3E80D11892A4F2839ACC6833"
+          }
+        },
+        {
+          "client_id": "140423471783-u2e1mub17eguqdhcftkib9m8fd57ussc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2UtCzDQJZP6YgMfnuBYEUKa-Cph-JqX0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140423471783-u2e1mub17eguqdhcftkib9m8fd57ussc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

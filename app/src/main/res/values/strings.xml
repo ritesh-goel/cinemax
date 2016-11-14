@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Cinemax</string>
+    <string name="title_activity_home">Movies</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_movie_detail">MovieDetail</string>
+    <string name="title_activity_my_favourites">My Favourites</string>
+    <string name="movie_home_banner_ad">ca-app-pub-5000638620408100/7942593274</string>
+    <string name="movie_detail_banner">ca-app-pub-5000638620408100/9000524073</string>
+    <string name="favourites_banner">ca-app-pub-5000638620408100/2953990472</string>
+    <string name="search_hint">Search movie..</string>
+
+</resources>

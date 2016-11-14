@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.rg.moviescentral.MyFavouritesActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/favourite_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/favourite_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF">
+
+                <ProgressBar
+                    android:id="@+id/now_playing_progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="32dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/now_playing_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/no_favourites_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:text="No Favourites Found"
+                    android:textSize="24dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewFavourites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="@string/favourites_banner" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <fragment
+            android:id="@+id/navigation_view"
+            android:name="com.rg.moviescentral.fragments.NavigationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.rg.moviescentral.customUI.Fab
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="56dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_swap_vert_black_36dp" />
+        <!-- Overlay that dims the screen -->
+        <com.gordonwong.materialsheetfab.DimOverlayFrameLayout
+            android:id="@+id/dim_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Circular reveal container for the sheet -->
+        <io.codetail.widget.RevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom"
+            android:orientation="vertical">
+
+            <!-- Sheet that contains your items -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fab_sheet"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content">
+
+                <!-- TODO: Put your sheet items here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/sort_by_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Name" />
+
+                    <Button
+                        android:id="@+id/sort_by_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Date" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="SORT BY"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </io.codetail.widget.RevealLinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

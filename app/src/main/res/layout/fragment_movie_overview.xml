@@ -1,0 +1,159 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/rating_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imdb_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/imdbicon"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/imdb_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/rotten_score_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/fresh"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tomato_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/tmdb_score_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tmdbicon"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tmdb_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="serif"
+                    android:text="Overview..."
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <com.ms.square.android.expandabletextview.ExpandableTextView
+                    android:id="@+id/expandable_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:animDuration="400"
+                    app:collapseDrawable="@drawable/ic_collapse_large_holo_light"
+                    app:expandDrawable="@drawable/ic_expand_large_holo_light"
+                    app:maxCollapsedLines="4">
+
+                    <TextView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="16dp" />
+
+                    <ImageButton
+                        android:id="@+id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center"
+                        android:background="@android:color/transparent"
+                        android:padding="16dp" />
+
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+                <TextView
+                    android:id="@+id/movie_detail_more_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/trailer_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Trailer..."
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:id="@+id/video_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/similar_movie_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
